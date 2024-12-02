@@ -11,24 +11,32 @@ fn main() {
         }
     };
     
-    // match solutions::day1_1::solve_part1(&input){
-    //     Ok(result) => println!("Distance: {}", result),
-    //     Err(e) => {
-    //         eprintln!("Error: {}", e);
-    //         std::process::exit(1);
-    //     }
-    // };
+    match solutions::day1_1::solve_part1(&input){
+        Ok(result) => println!("Day 1 Distance: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 
-    // match solutions::day1_2::solve_part2(&input){
-    //     Ok(result) => println!("Similarity: {}", result),
-    //     Err(e) => {
-    //         eprintln!("Error: {}", e);
-    //         std::process::exit(1);
-    //     }
-    // };
+    match solutions::day1_2::solve_part2(&input){
+        Ok(result) => println!("Day 1 Similarity: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 
     match solutions::day2_1::solve_part1(&input){
-        Ok(result) => println!("Safe Report: {}", result),
+        Ok(result) => println!("Day 2 Safe Report: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day2_2::solve_part2(&input){
+        Ok(result) => println!("Day 2 Safe Report: {}", result),
         Err(e) => {
             eprintln!("Error: {}", e);
             std::process::exit(1);
