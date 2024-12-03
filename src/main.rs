@@ -66,4 +66,12 @@ fn main() {
             std::process::exit(1);
         }
     };
+
+    match solutions::day3_2::solve_part2(&input3){
+        Ok(result) => println!("Day 3 Multiplication Do/Don't: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 }
