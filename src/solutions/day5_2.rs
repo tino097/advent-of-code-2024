@@ -45,12 +45,12 @@ pub fn solve_part2(input: &str) -> Result<i64, Box<dyn Error>> {
 }
 
 fn is_valid(update: &[i32], rules: &[Rule]) -> bool {
-    for &(first, after) in rules {
-        if update.contains(&first) && update.contains(&after) {
+    for &(first, next) in rules {
+        if update.contains(&first) && update.contains(&next) {
             let pos_first = update.iter().position(|&x| x == first).unwrap();
-            let pos_after = update.iter().position(|&x| x == after).unwrap();
+            let pos_next = update.iter().position(|&x| x == next).unwrap();
             
-            if pos_first > pos_after {
+            if pos_first > pos_next {
                 return false;
             }
         }
@@ -62,14 +62,14 @@ fn fix_update(update: &mut Vec<i32>, rules: &[Rule]) {
     let mut changed = true;
     while changed {
         changed = false;
-        for &(first, after) in rules {
-            if update.contains(&first) && update.contains(&after) {
+        for &(first, next) in rules {
+            if update.contains(&first) && update.contains(&next) {
                 let pos_first = update.iter().position(|&x| x == first).unwrap();
-                let pos_after = update.iter().position(|&x| x == after).unwrap();
+                let pos_next = update.iter().position(|&x| x == next).unwrap();
                 
-                if pos_first > pos_after {
+                if pos_first > pos_next {
                     // Swap elements to fix order
-                    update.swap(pos_first, pos_after);
+                    update.swap(pos_first, pos_next);
                     changed = true;
                 }
             }

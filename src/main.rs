@@ -122,4 +122,28 @@ fn main() {
             std::process::exit(1);
         }
     };
+
+    let input6 = match utils::get_input(6){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day6_1::solve_part1(&input6){
+        Ok(result) => println!("Day 5 Print Queue: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day6_2::solve_part2(&input6){
+        Ok(result) => println!("Day 5 Print Incorects Queue: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 }
