@@ -1,4 +1,4 @@
-use std::{error::Error, i32};
+use std::error::Error;
 
 pub fn solve_part2(input: &str) -> Result<i32, Box<dyn Error>> {
     let mut safe_report: i32 = 0;

@@ -1,4 +1,4 @@
-use std::{error::Error, i32};
+use std::error::Error;
 
 pub fn solve_part1(input: &str) -> Result<i64, Box<dyn Error>> {
 	

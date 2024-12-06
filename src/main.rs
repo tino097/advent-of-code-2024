@@ -74,4 +74,52 @@ fn main() {
             std::process::exit(1);
         }
     };
+
+    let input4 = match utils::get_input(4){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day4_1::solve_part1(&input4){
+        Ok(result) => println!("Day 4 Ceres Search: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day4_2::solve_part2(&input4){
+        Ok(result) => println!("Day 4 Ceres Search X-MAS: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    let input5 = match utils::get_input(5){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day5_1::solve_part1(&input5){
+        Ok(result) => println!("Day 5 Print Queue: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day5_2::solve_part2(&input5){
+        Ok(result) => println!("Day 5 Print Incorects Queue: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 }
