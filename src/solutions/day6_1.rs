@@ -71,7 +71,7 @@ pub fn solve_part1(input: &str) -> Result<i64, Box<dyn Error>> {
 fn find_guard(grid: &Grid) -> Result<Position, Box<dyn Error>> {
     for (r, row) in grid.iter().enumerate() {
         for (c, &cell) in row.iter().enumerate() {
-            if matches!(cell, '^' | 'v' | '<' | '>') {
+            if matches!(cell, '^' ) {
                 return Ok((r, c));
             }
         }

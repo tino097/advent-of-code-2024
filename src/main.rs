@@ -139,11 +139,11 @@ fn main() {
         }
     };
 
-    // match solutions::day6_2::solve_part2(&input6){
-    //     Ok(result) => println!("Day 5 Print Incorects Queue: {}", result),
-    //     Err(e) => {
-    //         eprintln!("Error: {}", e);
-    //         std::process::exit(1);
-    //     }
-    // };
+    match solutions::day6_2::solve_part2(&input6){
+        Ok(result) => println!("Day 6 Guard Map Loop: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
 }
