@@ -139,8 +139,24 @@ fn main() {
         }
     };
 
-    match solutions::day6_2::solve_part2(&input6){
-        Ok(result) => println!("Day 6 Guard Map Loop: {}", result),
+    // match solutions::day6_2::solve_part2(&input6){
+    //     Ok(result) => println!("Day 6 Guard Map Loop: {}", result),
+    //     Err(e) => {
+    //         eprintln!("Error: {}", e);
+    //         std::process::exit(1);
+    //     }
+    // };
+
+    let input7 = match utils::get_input(7){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day7_1::solve_part1(&input7){
+        Ok(result) => println!("Day 7 Assembly Order: {}", result),
         Err(e) => {
             eprintln!("Error: {}", e);
             std::process::exit(1);
