@@ -163,11 +163,37 @@ fn main() {
         }
     };
 
-    match solutions::day7_2::solve_part2(&input7){
-        Ok(result) => println!("Day 7 Bridge Repair Concatination: {}", result),
+    // match solutions::day7_2::solve_part2(&input7){
+    //     Ok(result) => println!("Day 7 Bridge Repair Concatination: {}", result),
+    //     Err(e) => {
+    //         eprintln!("Error: {}", e);
+    //         std::process::exit(1);
+    //     }
+    // };
+
+    let input8 = match utils::get_input(8){
+        Ok(input_str) => input_str,
         Err(e) => {
             eprintln!("Error: {}", e);
             std::process::exit(1);
         }
     };
+
+    match solutions::day8_1::solve_part1(&input8){
+        Ok(result) => println!("Day 8 Resonant Collienarity: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    };
+
+    match solutions::day8_2::solve_part2(&input8){
+        Ok(result) => println!("Day 8 Resonant: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
 }

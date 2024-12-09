@@ -13,13 +13,11 @@ pub fn solve_part2(input: &str) -> Result<i64, Box<dyn Error>> {
 
 	// Do the multiplication only if regex matches `do()` and not `don't()`
 	for cap in re.captures_iter(input){
-		println!("{:?}", cap);		
 		if cap.get(4).is_some(){
 			enabled = true;
 		}else if cap.get(5).is_some(){
 			enabled = false;
 		}else if cap.get(1).is_some() && enabled{
-			println!("{:?}", enabled);
 			let a = cap[2].parse::<i64>().unwrap();
 			let b = cap[3].parse::<i64>().unwrap();
 			result += a * b;
