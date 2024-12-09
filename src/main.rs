@@ -196,4 +196,21 @@ fn main() {
         }
         
     }
+
+    let input9 = match utils::get_input(9){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day9_1::solve_part1(&input9){
+        Ok(result) => println!("Day 9 Checksum: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    };
 }
