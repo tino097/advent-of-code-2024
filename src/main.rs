@@ -156,7 +156,15 @@ fn main() {
     };
 
     match solutions::day7_1::solve_part1(&input7){
-        Ok(result) => println!("Day 7 Assembly Order: {}", result),
+        Ok(result) => println!("Day 7 Bridge Repair: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day7_2::solve_part2(&input7){
+        Ok(result) => println!("Day 7 Bridge Repair Concatination: {}", result),
         Err(e) => {
             eprintln!("Error: {}", e);
             std::process::exit(1);
