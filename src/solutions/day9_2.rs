@@ -57,6 +57,9 @@ pub fn solve_part2(input: &str) -> Result<i64, Box<dyn Error>> {
             break;
         }
 
+        // Clone the disk before the mutable borrow occurs
+        let disk_clone = disk.clone();
+
         // Try to move the block into free space
         for i in 0..space_map.len() {
             let (s, e) = space_map[i];
@@ -68,7 +71,7 @@ pub fn solve_part2(input: &str) -> Result<i64, Box<dyn Error>> {
                 let (target, remaining) = right.split_at_mut(block_len);
                 
                 // Now we can copy the block into the target part
-                target.copy_from_slice(disk[block_idx_start..block_idx_end]);
+                target.copy_from_slice(&disk_clone[block_idx_start..block_idx_end]);
                 
                 // We clear the original block's position in the left part
                 remaining.fill(None);

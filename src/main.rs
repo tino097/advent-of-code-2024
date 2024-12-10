@@ -213,4 +213,38 @@ fn main() {
         }
         
     };
+
+    // match solutions::day9_2::solve_part2(&input9){
+    //     Ok(result) => println!("Day 9 Checksum: {}", result),
+    //     Err(e) => {
+    //         eprintln!("Error: {}", e);
+    //         std::process::exit(1);
+    //     }
+        
+    // }
+
+    let input10 = match utils::get_input(10){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day10_1::solve_part1(&input10){
+        Ok(result) => println!("Day 10 Trailheads: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day10_2::solve_part2(&input10){
+        Ok(result) => println!("Day 10 Distinct Trailheads: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    }
 }
