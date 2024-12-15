@@ -247,4 +247,30 @@ fn main() {
             std::process::exit(1);
         }
     }
+
+    let input11 = match utils::get_input(11){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day11_1::solve_part1(&input11){
+        Ok(result) => println!("Day 11 Stones Count: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day11_2::solve_part2(&input11){
+        Ok(result) => println!("Day 11 Stones Count Plus: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
 }
