@@ -273,4 +273,30 @@ fn main() {
         }
         
     }
+
+    let input12 = match utils::get_input(12){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day12_1::solve_part1(&input12){
+        Ok(result) => println!("Day 12 Region Price: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day12_2::solve_part2(&input12){
+        Ok(result) => println!("Day 12 Region Price By Side: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
 }
