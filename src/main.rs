@@ -325,4 +325,29 @@ fn main() {
         }
         
     }
+
+    let input14 = match utils::get_input(14){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day14_1::solve_part1(&input14){
+        Ok(result) => println!("Day 14 Quadrant Safety: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day14_2::solve_part2(&input14){
+        Ok(result) => println!("Day 14 Quadrant Safety: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    }
 }
