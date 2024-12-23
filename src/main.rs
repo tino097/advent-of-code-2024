@@ -299,4 +299,30 @@ fn main() {
         }
         
     }
+
+    let input13 = match utils::get_input(13){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day13_1::solve_part1(&input13){
+        Ok(result) => println!("Day 13 Token Count: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day13_2::solve_part2(&input13){
+        Ok(result) => println!("Day 13 Token Count: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
 }
