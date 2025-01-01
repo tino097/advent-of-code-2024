@@ -350,4 +350,29 @@ fn main() {
             std::process::exit(1);
         }
     }
+
+    let input15 = match utils::get_input(15){
+        Ok(input_str) => input_str,
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    };
+
+    match solutions::day15_1::solve_part1(&input15){
+        Ok(result) => println!("Day 15 Warehouse Woes: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+        
+    }
+
+    match solutions::day15_2::solve_part2(&input15){
+        Ok(result) => println!("Day 15 Widen Warehouse Woes: {}", result),
+        Err(e) => {
+            eprintln!("Error: {}", e);
+            std::process::exit(1);
+        }
+    }
 }
