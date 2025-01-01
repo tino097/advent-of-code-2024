@@ -9,6 +9,10 @@ In this repostory I will also track the lessons learned and the improvements I m
 
 The [first](https://adventofcode.com/2024/day/1) puzzle is usually easiest and it wont need to much time to get [solved](lessons/day_01.md).
 
+## Day 2
+
+The [second](https://adventofcode.com/2024/day/2) puzzle is a bit more challenging and it will require some more time to get [solved](lessons/day_02.md).
+
 ## Acknowledgments
 
 - [Advent of Code](https://adventofcode.com/) by Eric Wastl
